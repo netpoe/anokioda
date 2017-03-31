@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+@import "./third-party/bootstrap4/variables";
+@import "./sass/bootstrap-imports";
+@import "./third-party/bourbon/bourbon";
+
+// EBM variables
+@import "./sass/ebm-variables";
+
+// EBM Helpers
+@import "./ebm/helpers/ebm-helpers";
+
+// EBM Functions
+@import "./ebm/functions/ebm-functions";
+
+// EBM Fonts setup
+@import "./sass/ebm-fonts-setup";
+
+// EBM Fonts setup
+@import "./sass/ebm-fonts";
+
+// EBM Overrides
+@import "./sass/ebm-overrides";
+
+// Shared styles for all templates
+@import "./sass/ebm-global";
+
+@import "./ebm/modules/ebm-header";
+@import "./third-party/bootstrap4/forms";
+@import "./third-party/bootstrap4/breadcrumb";
+@import "./third-party/bootstrap4/card";
+
+// Boostrap custom overrides
+@import "./sass/ebm-bootstrap-overrides";
+
+@import "./sass/common/top-menu";
+@import "./sass/common/search-wrapper";
+@import "./sass/common/user-resources-nav";
+
+@import "./ebm/control/ebm-color-text-control";
+@import "./ebm/control/ebm-spacing-control";

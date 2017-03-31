@@ -1,0 +1,35 @@
+/*
+  Bootstrap overrides
+*/
+
+// Use this in B4 _forms.scss for adjusting line-heights in special input types
+// @supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true)) and (not (-moz-appearance:none)) {}
+
+.breadcrumb {
+  margin-bottom: 0;
+  font-size: 10px;
+}
+
+.btn {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.card {
+  margin-bottom: get-spacer(3, y);
+  .card-header {
+    @include flex-row-space-between;
+    .title, .action {
+      @include flex-column-center;
+      min-height: 35px;
+    }
+  }
+}
+
+.card-block {
+  &.card-block-scroll {
+    overflow: scroll;
+    height: 222px;
+  }
+}

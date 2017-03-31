@@ -1,0 +1,78 @@
+@mixin header-padding($padding: $header-height-control) {
+  padding: px-to-rem($padding) 0;
+}
+
+.header-padding {
+  @include header-padding;
+}
+
+.header {
+  border-bottom: 1px solid $gray-lightest;
+  background-color: white;
+  .header-left, .header-center, .header-right {
+    @include flex-column-center;
+    height: $header-height-control;
+  }
+  .header-left, .header-right {}
+  .header-left {}
+  .header-center {
+    text-align: center;
+  }
+  .header-right {
+    text-align: right;
+  }
+  .logo {
+    img {
+      width: $logo-width-control;
+      height: auto;
+    }
+  }
+}
+
+#logo-konfio-wrapper {
+  width: 120px;
+  height: auto;
+}
+#logo-konfio {
+  fill: $brand-info;
+}
+
+.header {
+  .header-left {
+    > div {
+      @include flex-row;
+    }
+  }
+}
+
+.logo-wrapper,
+.search-bar-wrapper {
+  @include flex-column-center;
+  min-height: $header-height-control;
+  margin-right: get-spacer(3, x);
+}
+
+.logo-wrapper {}
+
+.search-bar-wrapper {
+  width: 100%;
+}
+
+#btn-search-trigger {
+  text-align: left;
+}
+
+.sub-header {
+  @extend .header;
+  .header-left,
+  .header-center,
+  .header-right {
+    height: 21px;
+  }
+}
+
+@media #{$sm-down} {
+  body {
+    .header {}
+  }
+}
